@@ -31,6 +31,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3vo-rU-Vwp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kkp-N1-zcu">
+                            <connections>
+                                <action selector="editButtonClicked:" destination="BYZ-38-t0r" id="qZj-ek-13U"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="pgO-41-kfP">
                             <connections>
                                 <action selector="addButtonClicked:" destination="BYZ-38-t0r" id="YXB-fz-j7e"/>
@@ -54,24 +59,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2W-ST-nAi">
-                                <rect key="frame" x="65" y="165" width="285" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="hVO-2E-LYy"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2W-ST-nAi">
+                                <rect key="frame" x="65" y="168" width="284" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Vk-hH-Vrq">
-                                <rect key="frame" x="65" y="232" width="285" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="nap-Ty-xM6"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Vk-hH-Vrq">
+                                <rect key="frame" x="65" y="232" width="284" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGY-nO-KDI">
-                                <rect key="frame" x="138" y="329" width="139" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGY-nO-KDI">
+                                <rect key="frame" x="135" y="370" width="144" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="72Q-xh-hTV"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
@@ -80,26 +96,40 @@
                                     <action selector="saveButtonClicked:" destination="gio-73-Jja" eventType="touchUpInside" id="KS6-Ea-VvZ"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POa-lG-ZVP">
+                                <rect key="frame" x="65" y="296" width="284" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="91g-dA-XtK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="u2W-ST-nAi" firstAttribute="leading" secondItem="1Vk-hH-Vrq" secondAttribute="leading" id="LNK-mH-tXe"/>
-                            <constraint firstItem="91g-dA-XtK" firstAttribute="bottom" secondItem="oGY-nO-KDI" secondAttribute="bottom" constant="491" id="M3C-ce-q50"/>
-                            <constraint firstItem="u2W-ST-nAi" firstAttribute="leading" secondItem="91g-dA-XtK" secondAttribute="leading" constant="65" id="MBx-41-2ax"/>
-                            <constraint firstItem="oGY-nO-KDI" firstAttribute="leading" secondItem="91g-dA-XtK" secondAttribute="leading" constant="138" id="VYl-Xd-lUW"/>
-                            <constraint firstItem="1Vk-hH-Vrq" firstAttribute="top" secondItem="u2W-ST-nAi" secondAttribute="bottom" constant="33" id="aki-ra-LIp"/>
-                            <constraint firstItem="1Vk-hH-Vrq" firstAttribute="centerX" secondItem="oGY-nO-KDI" secondAttribute="centerX" id="cxt-Ma-YDq"/>
-                            <constraint firstItem="u2W-ST-nAi" firstAttribute="trailing" secondItem="1Vk-hH-Vrq" secondAttribute="trailing" id="iKn-Yp-8LA"/>
-                            <constraint firstItem="u2W-ST-nAi" firstAttribute="top" secondItem="91g-dA-XtK" secondAttribute="top" constant="77" id="myk-Ug-pgD"/>
-                            <constraint firstItem="u2W-ST-nAi" firstAttribute="centerX" secondItem="FUP-18-8aK" secondAttribute="centerX" id="q80-eH-3mC"/>
-                            <constraint firstItem="oGY-nO-KDI" firstAttribute="top" secondItem="1Vk-hH-Vrq" secondAttribute="bottom" constant="63" id="tbS-Rv-Xpg"/>
+                            <constraint firstItem="91g-dA-XtK" firstAttribute="trailing" secondItem="1Vk-hH-Vrq" secondAttribute="trailing" constant="65" id="2Xx-SC-MN4"/>
+                            <constraint firstItem="POa-lG-ZVP" firstAttribute="leading" secondItem="91g-dA-XtK" secondAttribute="leading" constant="65" id="8oT-BI-zG4"/>
+                            <constraint firstItem="oGY-nO-KDI" firstAttribute="leading" secondItem="91g-dA-XtK" secondAttribute="leading" constant="135" id="Bkf-b6-dPJ"/>
+                            <constraint firstItem="91g-dA-XtK" firstAttribute="trailing" secondItem="u2W-ST-nAi" secondAttribute="trailing" constant="65" id="D6q-YM-ohX"/>
+                            <constraint firstItem="91g-dA-XtK" firstAttribute="trailing" secondItem="oGY-nO-KDI" secondAttribute="trailing" constant="135" id="GbV-rO-ARe"/>
+                            <constraint firstItem="u2W-ST-nAi" firstAttribute="leading" secondItem="91g-dA-XtK" secondAttribute="leading" constant="65" id="Hs6-rJ-30d"/>
+                            <constraint firstItem="91g-dA-XtK" firstAttribute="trailing" secondItem="POa-lG-ZVP" secondAttribute="trailing" constant="65" id="Jxb-Un-IOz"/>
+                            <constraint firstItem="POa-lG-ZVP" firstAttribute="top" secondItem="1Vk-hH-Vrq" secondAttribute="bottom" constant="30" id="Xrm-qI-Lzb"/>
+                            <constraint firstItem="1Vk-hH-Vrq" firstAttribute="top" secondItem="u2W-ST-nAi" secondAttribute="bottom" constant="30" id="bRA-8q-XTc"/>
+                            <constraint firstItem="oGY-nO-KDI" firstAttribute="top" secondItem="POa-lG-ZVP" secondAttribute="bottom" constant="40" id="dYW-uK-31V"/>
+                            <constraint firstItem="1Vk-hH-Vrq" firstAttribute="leading" secondItem="91g-dA-XtK" secondAttribute="leading" constant="65" id="ebX-t1-e2W"/>
+                            <constraint firstItem="u2W-ST-nAi" firstAttribute="top" secondItem="91g-dA-XtK" secondAttribute="top" constant="80" id="iyk-JM-bp4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0oD-Ph-EoA"/>
                     <connections>
                         <outlet property="cityField" destination="1Vk-hH-Vrq" id="ecp-oI-Pzy"/>
                         <outlet property="nameField" destination="u2W-ST-nAi" id="lXp-dw-oJc"/>
+                        <outlet property="numberField" destination="POa-lG-ZVP" id="Skn-Oc-fIf"/>
                         <outlet property="saveButton" destination="oGY-nO-KDI" id="NKz-6m-k7J"/>
                     </connections>
                 </viewController>
@@ -127,8 +157,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
